@@ -1,0 +1,126 @@
+:root {
+  --dark-blue-300: #0a3871;
+  --gray-400: #495057;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Inter", sans-serif;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+/* RESPONSIVE  */
+.container {
+  width: 375px;
+  height: 933px;
+  border: solid blue 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container > div:first-of-type{
+    border: solid 2px red;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container > div:last-of-type{
+    border: solid 2px green;
+
+}
+
+.logo {
+  display: block;
+  width: 32px;
+  height: 48px;
+  align-self: flex-start;
+
+}
+
+textarea {
+    padding: 8px;
+  font-size: 32px;
+  width: 343px;
+  border: none;
+  outline: none;
+  resize: none;
+  overflow: auto;
+  color: var(--dark-blue-300);
+  min-height: 400px;
+  font-weight: 400;
+  line-height: 40px;
+}
+textarea::placeholder {
+  color: var(--dark-blue-300);
+  font-weight: 400;
+  line-height: 18px;
+  font-size: 32px;
+}
+
+.info-text {
+  color: var(--gray-400);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  vertical-align: middle;
+}
+
+.info-text::before {
+  content: url("./info.svg");
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-top: -4px;
+  vertical-align: middle;
+}
+
+
+button {
+
+  height: 67px;
+  width: 343px;
+  border: none;
+  padding: 24px;
+  outline: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  cursor: pointer;
+}
+.btn-primary {
+    background-color: var(--dark-blue-300);
+    border: 2px solid white;
+    border-radius: 24px;
+    color: white;
+  }
+  .btn-secondary {
+    background-color: white;
+    color: var(--dark-blue-300);
+    border: 2px solid var(--dark-blue-300);
+    border-radius: 24px;
+  }
+
+
+
+/* Móviles en horizontal o tablets en vertical
+    */
+@media (min-width: 768px) {
+}
+
+/* Tablets en horizonal y escritorios normales */
+@media (min-width: 1024px) {
+}
+
+/* Escritorios muy anchos*/
+@media (min-width: 1200px) {
+}
