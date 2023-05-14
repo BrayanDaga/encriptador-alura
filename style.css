@@ -49,13 +49,13 @@ textarea {
   height: 300px;
   height: 360px;
   font-weight: 400;
-  line-height: 36px;
+  line-height: 2.5rem;
 }
 
 textarea::placeholder {
   color: var(--dark-blue-300);
   font-weight: 400;
-  line-height: 18px;
+  line-height: 2.5rem;
   font-size: 32px;
 }
 
@@ -83,7 +83,7 @@ button {
   outline: none;
   font-weight: 400;
   font-size: 16px;
-  line-height: 19px;
+  line-height: 1.2rem;
   text-align: center;
   cursor: pointer;
   display: inline-block;
@@ -141,7 +141,7 @@ button {
 /*  */
 #texto-descifrado {
   font-size: 24px;
-  line-height: 28px;
+  line-height: 1.7rem;
   text-align: justify;
   margin: 0 0 88px 0;
   color: var(--gray-400);
