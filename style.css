@@ -25,7 +25,7 @@ body {
 }
 
 .container {
-  width: 90%;
+  width: 90vw;
   height: 86vh;
   margin: 0 auto;
   padding: 20px 20px 20px 100px;
@@ -39,7 +39,6 @@ body {
 
 .formulario {
   width: calc(66.67% - 140px);
-
   float: left;
 }
 
@@ -159,4 +158,38 @@ button {
   width: calc(90% - 20px);
   display: block;
   margin: 2.16rem auto;
+}
+
+@media screen and (max-width: 865px) {
+  .header {
+    height: 8vh;
+  }
+  .container {
+    height: auto;
+    padding: 0;
+  }
+
+  .formulario {
+    width: 100%;
+    height: 72vh;
+  }
+  .card {
+    width: calc(100% - 48px);
+    height: auto;
+    margin-right: 32px;
+  }
+  .card img {
+    display: none;
+  }
+  .info-text {
+    font-size: 1rem;
+  }
+  .card .btn-secondary {
+    display: block;
+    margin: 16px auto 0;
+    width: 100%;
+  }
+  #texto-descifrado {
+    height: 160px;
+  }
 }
