@@ -60,7 +60,7 @@ btnEncriptar.onclick = encriptar;
 
 function callTemplate(val) {
   return `<p id="texto-resultado">${val} </p>
-            <button class="btn-secondary" id="btn-copiar">Copiar</button>`;
+            <button class="btn btn-secondary" id="btn-copiar">Copiar</button>`;
 }
 function callBtnCopiar() {
   btnCopiar = document.querySelector("#btn-copiar");
