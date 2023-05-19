@@ -3,10 +3,12 @@ const btnEncriptar = document.querySelector("#btn-encriptar");
 const btnDesencriptar = document.querySelector("#btn-desencriptar");
 const cardContent = document.querySelector(".card");
 
-let texto2 = "";
-let texto1 = "";
+let texto2;
+let texto1;
 
 function desencriptar(evento) {
+  texto2 = "";
+  texto1 = "";
   texto1 = textForm.value;
   console.log(texto1);
 
@@ -19,6 +21,8 @@ function desencriptar(evento) {
   cardContent.innerHTML = callTemplate(texto2);
 }
 function encriptar(evento) {
+  texto2 = "";
+  texto1 = "";
   texto1 = textForm.value;
   console.log(texto1);
 
