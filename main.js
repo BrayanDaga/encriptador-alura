@@ -2,7 +2,8 @@ const textForm = document.querySelector("#texto-form");
 const btnEncriptar = document.querySelector("#btn-encriptar");
 const btnDesencriptar = document.querySelector("#btn-desencriptar");
 const cardContent = document.querySelector(".card");
-
+let btnCopiar = "";
+let textoDescifrado = "";
 let texto2;
 let texto1;
 
@@ -19,6 +20,7 @@ function desencriptar(evento) {
   texto2 = texto2.replaceAll("ufat", "u");
 
   cardContent.innerHTML = callTemplate(texto2);
+  callBtnCopiar();
 }
 function encriptar(evento) {
   texto2 = "";
@@ -49,6 +51,7 @@ function encriptar(evento) {
     }
   }
   cardContent.innerHTML = callTemplate(texto2);
+  callBtnCopiar();
 }
 
 btnDesencriptar.onclick = desencriptar;
@@ -56,6 +59,25 @@ btnDesencriptar.onclick = desencriptar;
 btnEncriptar.onclick = encriptar;
 
 function callTemplate(val) {
-  return `<p id="texto-descifrado">${val} </p>
-            <button class="btn-secondary">Copiar</button>`;
+  return `<p id="texto-resultado">${val} </p>
+            <button class="btn-secondary" id="btn-copiar">Copiar</button>`;
+}
+function callBtnCopiar() {
+  btnCopiar = document.querySelector("#btn-copiar");
+
+  btnCopiar.onclick = copiarTexto;
+}
+
+function copiarTexto() {
+  var elementoTexto = document.getElementById("texto-resultado");
+
+  var auxiliar = document.createElement("textarea");
+  var textoCopiado = elementoTexto.innerText;
+
+  auxiliar.value = textoCopiado;
+  document.body.appendChild(auxiliar);
+
+  auxiliar.select();
+  document.execCommand("copy");
+  document.body.removeChild(auxiliar);
 }
