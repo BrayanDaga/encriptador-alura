@@ -193,3 +193,17 @@ button {
     height: 160px;
   }
 }
+
+@media (max-width: 500px) {
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    display: block;
+  }
+  .formulario {
+    height: auto;
+  }
+  textarea {
+    height: 300px;
+  }
+}
